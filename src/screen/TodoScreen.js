@@ -4,25 +4,20 @@ import { useSelector } from 'react-redux'
 import CustomHeader from '../components/CustomHeader'
 import AddButton from '../components/AddButton'
 import { FlatList } from 'react-native-gesture-handler'
+import TodoItem from '../components/TodoItem'
 
 const TodoScreen = () => {
   const data = useSelector((state)=>state.todo.data)
   console.log(data)
 
-const renderTodoItem=(item)=>{
-return(
-<View>
-  <Text>{item.title}</Text>
-</View>
-);
-}
-
   return (
     <View style={styles.container}>
       <FlatList
       data={data}
-      renderItem={renderTodoItem}
-      ListEmptyComponent={<View>
+      renderItem={({ item }) => (
+        <TodoItem item={item} />
+      )}
+        ListEmptyComponent={<View>
           <Text>no list found</Text>
         </View>
         }
