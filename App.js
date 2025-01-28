@@ -11,7 +11,7 @@ const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <Provider store={store}>  {/* Wrap with Redux Provider */}
+    <Provider store={store}>  
       <PersistGate loading={null} persistor={persistor}>
         <NavigationContainer>
           <Stack.Navigator initialRouteName="TodoApp">

@@ -27,14 +27,14 @@ const AddTodo = ({navigation}) => {
       <TextInput
       value={value}
       placeholder='Enter the todo'
-      onChange={setValue}
+      onChangeText={setValue}
       style={styles.input}/>
 
     <TextInput
       value={desc}
       numberOfLines={4}
       placeholder='Enter the Description of todo'
-      onChange={setDesc}
+      onChangeText={setDesc}
       style={[styles.input, styles.minHeight]}/>
 
     <SubmitButton title="ADD" onPress={onSubmit}/>
