@@ -13,6 +13,8 @@ export default SubmitButton
 
 const styles = StyleSheet.create({
     container:{
+      alignSelf:'center',
+        width:'30%',
         backgroundColor:"#3C75BE",
         padding:8,
         margin:10,

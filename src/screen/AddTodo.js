@@ -27,6 +27,7 @@ const AddTodo = ({navigation}) => {
       <TextInput
       value={value}
       placeholder='Enter the todo'
+      placeholderTextColor="gray"
       onChangeText={setValue}
       style={styles.input}/>
 
@@ -34,6 +35,7 @@ const AddTodo = ({navigation}) => {
       value={desc}
       numberOfLines={4}
       placeholder='Enter the Description of todo'
+      placeholderTextColor="gray"
       onChangeText={setDesc}
       style={[styles.input, styles.minHeight]}/>
 
@@ -49,7 +51,8 @@ const styles = StyleSheet.create({
         borderRadius:5,
         borderWidth:1,
         padding:10,
-        margin:10,
+        marginHorizontal:20,
+        marginVertical:10,
         fontSize: 18,
         borderColor:"black" 
     },

@@ -9,7 +9,7 @@ export const todoSlice = createSlice({
         addTodo:(state,action)=>{
             const todoData ={
                 id:state.data.length,
-                tittle:action.payload.title,
+                title:action.payload.title,
                 desc: action.payload.desc
             };
 
